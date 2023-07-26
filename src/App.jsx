@@ -15,13 +15,15 @@ const user = {
 };
 
 const hello = <h1>Hello, {formatName(user)}!</h1>;
+const token = process.env.VITE_RAW_TOKEN;
 
 function App() {
   const [count, setCount] = useState(0)
-
+  console.log(`${import.meta.env.VITE_RAW_TOKEN}`);
   return (
     <>
       <div className='App'>
+      <div>Here is the env token: {import.meta.env.VITE_RAW_TOKEN}`</div>
         {hello}
         <h2>Feed</h2>
         <Post />
